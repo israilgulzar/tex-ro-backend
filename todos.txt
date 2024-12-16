@@ -1,0 +1,32 @@
+API-DOC
+
+######### Manage products #########
+
+- listing for admin with filters
+- create product
+- update product
+- delete product (soft)
+- dorp down for listing at user and admin with pagination for survey module and dynamic page
+- dorp down for listing at admin according to surveyId with pagination
+
+
+######### Manage reviews #########
+- listing for admin with filters
+- create survey
+- update survey
+- delete survey (soft)
+- dorp down for listing at admin with pagination for gift card module
+
+  
+######### Manage gift cards #########
+- listing for admin with filters
+- create gift card
+- update gift card
+- delete gift card 
+- get gift card according to product id
+
+######### reviews #########
+- listing for admin with filters
+- update review status according to review got (web scraping)
+- update review status according to sent selected gift cart by admin
+

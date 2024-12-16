@@ -1,0 +1,176 @@
+-> user:
+
+_id: string
+name: string
+email: string
+password :string
+phone: string
+contryCode : string
+otp: string
+createdAt: string
+updatedAt: string
+gender: string
+dob: string
+emailverifyAt: date
+passwordResetToken: string
+reffrel: string
+isAdmin: boolean
+isActive: boolean
+defaultLanguage: string
+profileImage: string	
+
+-> userAddresses:
+_id : string
+userId : string
+receiverName: string
+receiverEmail: string
+receiverPhone: string
+receivercountryCode: string
+address: string
+pincode: string
+country: string
+state: string
+city: string
+street: string
+landmark: string
+last_used_flag: boolean
+
+# ======= pending =======
+-> user_wishlist:
+_id:
+user_id:
+variant_price_id:
+createdAt:
+updatedAt:
+# ======= pending =======
+
+
+-> user_banks:
+id: string
+user_id: string
+ifsc: string
+accountNumber: string
+branchAddress: string
+createdAt: string
+updatedAt:string
+isVerified: boolean
+isActive: boolean
+
+
+-> category:
+
+id
+catagoryName
+isActive
+createdAt
+updatedAa														
+
+-> subCatagory					
+id
+subcatagoryname
+isActive
+createdAt
+updatedAa
+catagoryid													
+
+-> brands:
+_id: string
+brandName: string
+brandImage:string
+isActive: boolean
+createdAt: date
+updatedAa: date
+
+-> product variations types:
+_id: string
+type: string -> ml/kg
+isactive: boolean
+createdAt: date
+updatedAa: date
+
+
+-> product
+  _id	
+	name
+	description
+	short_description
+	brand_id
+	category_id
+	subCatagoryId
+	isActive
+  thumbnail: string
+	createdAt
+	udatedAt
+	viewsNumber: number
+
+-> variant prices:
+_id: string
+product: product_id
+variant: variant_id
+stock: number (--> ex: 50 - 5 45 0 out of stock)
+price: number
+old price: number
+slider_images: array
+createdAt: date
+updatedAa: date
+isReturnAble: boolean
+canApplyCoupon: boolean
+
+-> user_cart:
+
+user_id:
+variant_price_id:
+createdAt:
+updatedAt:
+qty:
+
+-> orders:
+_id:
+orderID: // need to discous
+user_id:
+userAddressId:
+createdAt:
+updatedAt:
+# productVariantIds:
+variantPricesIds: array
+expectedDeliveryDate:
+orderStatus:
+totalAmount:
+paymentStatus:
+paymentMethod:
+couponCode:
+discount:
+taxAmount:
+subTotal: -> invoice amount
+orderNote:
+
+-> orderReturnRequest:
+
+_id:
+orderID:
+status:
+createdAt:
+updatedAt:
+productVariantId:
+bankId:
+userId:
+paymentStatus:
+paymentMethod:
+
+
+-> coupons:
+
+_id:
+name:
+couponCode: 
+type: persentage/amount
+value: // need to discous
+isActive:
+createdAt:
+updatedAt:
+startDate:
+endDate:
+minOrderAmount:
+paymentMethod: -> which method can use this couponCode:
+totalUsed: 
+
