@@ -67,11 +67,12 @@ const scrapeAmazonReviews = async () => {
     while (count <= maxLimit) {
       try {
         await page.goto(
-          `https://www.amazon.in/DRUNKEN-Slipper-Flops-Slides-Blue-8-9/product-reviews/B08LKWHGQV/ref=cm_cr_arp_d_paging_btm_next_2?ie=UTF8&reviewerType=all_reviews&pageNumber=${count}`
+          // `https://www.amazon.in/DRUNKEN-Slipper-Flops-Slides-Blue-8-9/product-reviews/B08LKWHGQV/ref=cm_cr_arp_d_paging_btm_next_2?ie=UTF8&reviewerType=all_reviews&pageNumber=${count}`
+          `https://www.amazon.in/product-reviews/B082WYMTWF/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&reviewerType=all_reviews=${count}`
         );
 
         const reviews = await page.evaluate(() => {
-          const element = document.querySelectorAll("div[data-hook='review']");
+          const element = document.querySelectorAll(" li[data-hook='review']");
           return Array.from(element).map((elm) => ({
             title:
               elm.querySelector(".a-profile-name")?.textContent?.trim() || "",
